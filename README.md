@@ -33,16 +33,15 @@ The backend is built with **Node.js + Express + MongoDB**, and the frontend is *
 
 ## 📥 How to Run Locally?
 ### 📌 1. Clone the repository
-###📌 2. Install dependencies
+- **bash**
+- **git clone https://github.com/kaireshov/contact-book.git**
+- **cd contact-book**
+### 📌 2. Install dependencies
 - **npm install**
 📌 3. Configure environment variables (.env)
-Create a .env file in the root directory and add the following configuration:
-
-env
-Копировать
-Редактировать
-MONGO_URI=mongodb+srv://your_user:your_password@yourcluster.mongodb.net/contactbook
-PORT=3000
+**Create a .env file in the root directory and add the following configuration:**
+**MONGO_URI=mongodb+srv://your_user:your_password@yourcluster.mongodb.net/contactbook
+PORT=3000**
 📌 If you are using a local MongoDB instance, set
 
 env
