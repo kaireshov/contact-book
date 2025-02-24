@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.hidden {
+    display: none;
+}
+
+.form-container {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px gray;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+input {
+    display: block;
+    width: 250px;
+    margin: 5px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+button:hover {
+    background: #218838;
+}
+
+#contacts-list, #groups-list {
+    text-align: left;
+    max-width: 400px;
+    margin: auto;
+}
+
+.contact, .group {
+    background: white;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px gray;
+    display: flex;
+    justify-content: space-between;
+}
+
+.delete-btn {
+    background: #dc3545;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    color: white;
+}
+
+#contacts-checkboxes {
+    text-align: left;
+    max-width: 300px;
+    margin: auto;
+}

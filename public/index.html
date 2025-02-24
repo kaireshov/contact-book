@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Book</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="auth-section">
+        <h2>Login</h2>
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <p>Don't have an account? <a href="register.html">Register</a></p>
+    </div>
+
+    <div id="app-section" class="hidden">
+        <h1>📞 Contact Book</h1><br>
+        <button onclick="logout()">Logout</button>
+
+        <div class="form-container">
+            <h2>Add Contact</h2>
+            <input type="text" id="name" placeholder="Name">
+            <input type="text" id="phone" placeholder="Phone">
+            <input type="email" id="contact-email" placeholder="Email">
+            <button onclick="addContact()">Add Contact</button>
+        </div>
+
+        <h2>Contacts</h2>
+        <div id="contacts-list"></div>
+
+        <h2>Create Group</h2>
+<input type="text" id="group-name" placeholder="Group Name">
+<div id="contacts-checkboxes">
+
+</div>
+<button onclick="createGroup()">Create Group</button>
+
+<h2>Groups</h2>
+<div id="groups-list">
+
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
