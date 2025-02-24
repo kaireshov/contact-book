@@ -22,11 +22,15 @@ app.use('/groups', groupRoutes);
 app.use('/calls', callRoutes);
 app.use('/auth', authRoutes);
 
+app.get('/api/some-endpoint', (req, res) => {
+    res.json({ message: "API работает!" });
+});
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 app.get('/favicon.ico', (req, res) => res.status(204).end());
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
