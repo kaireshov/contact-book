@@ -11,7 +11,7 @@ const authRoutes = require('./routes/auth');
 
 const app = express();
 app.use(express.json());
-app.use(cors({ origin: "*" }));
+app.use(cors());
 app.use(express.static('public')); 
 mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log("MongoDB connected"))
@@ -32,5 +32,6 @@ app.get('/', (req, res) => {
 
 app.get('/favicon.ico', (req, res) => res.status(204).end());
 
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 10000;  
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+

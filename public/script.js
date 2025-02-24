@@ -1,4 +1,4 @@
-const API_BASE = "https://contact-book-nk37.onrender.com";
+const API_BASE_URL = "https://contact-book-nk37.onrender.com";
 const TOKEN_KEY = "contactBookToken";
 
 // 🔹 Register a new user
