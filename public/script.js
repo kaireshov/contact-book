@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:3000";
+const API_BASE = "https://contact-book-nk37.onrender.com";
 const TOKEN_KEY = "contactBookToken";
 
 // 🔹 Register a new user
@@ -7,7 +7,7 @@ async function register() {
     const email = document.getElementById("reg-email").value;
     const password = document.getElementById("reg-password").value;
 
-    const response = await fetch(`${API_BASE}/auth/register`, {
+    const response = await fetch(`https://contact-book-nk37.onrender.com/auth/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, email, password }),
@@ -26,7 +26,7 @@ async function login() {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    const response = await fetch(`${API_BASE}/auth/login`, {
+    const response = await fetch(`https://contact-book-nk37.onrender.com/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -62,7 +62,7 @@ function showApp() {
 async function loadContacts() {
     const token = localStorage.getItem("contactBookToken");
 
-    const response = await fetch("http://localhost:3000/contacts", {
+    const response = await fetch("https://contact-book-nk37.onrender.com/contacts", {
         headers: { "Authorization": `Bearer ${token}` }
     });
 
@@ -93,7 +93,7 @@ async function loadContacts() {
 async function loadGroups() {
     const token = localStorage.getItem("contactBookToken");
 
-    const response = await fetch("http://localhost:3000/groups", {
+    const response = await fetch("https://contact-book-nk37.onrender.com/groups", {
         headers: { "Authorization": `Bearer ${token}` }
     });
 
@@ -127,7 +127,7 @@ async function addContact() {
 
     console.log("📤 Sending contact data:", { name, phone, email });
 
-    const response = await fetch("http://localhost:3000/contacts", {
+    const response = await fetch("https://contact-book-nk37.onrender.com/contacts", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -169,7 +169,7 @@ async function createGroup() {
         return;
     }
 
-    const response = await fetch("http://localhost:3000/groups", {
+    const response = await fetch("https://contact-book-nk37.onrender.com/groups", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -195,7 +195,7 @@ async function createGroup() {
 async function deleteContact(contactId) {
     const token = localStorage.getItem("contactBookToken");
 
-    const response = await fetch(`http://localhost:3000/contacts/${contactId}`, {
+    const response = await fetch(`https://contact-book-nk37.onrender.com/contacts/${contactId}`, {
         method: "DELETE",
         headers: {
             "Authorization": `Bearer ${token}`
